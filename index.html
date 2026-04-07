@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PageDrop - Sua jornada de leitura</title>
+    <meta name="description" content="PageDrop: o app social de leitura. Acompanhe seus livros, registre sessoes, compartilhe com amigos. O Strava dos livros.">
+    <meta name="theme-color" content="#1A1816">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #1A1816; color: #F5F0EB; line-height: 1.6; }
+        .accent { color: #D97757; }
+        .container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+        /* Nav */
+        nav { padding: 20px 0; border-bottom: 1px solid #353230; }
+        nav .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 24px; font-weight: 700; color: #F5F0EB; text-decoration: none; }
+        .nav-links { display: flex; gap: 24px; align-items: center; }
+        .nav-links a { color: #A39E99; text-decoration: none; font-size: 14px; transition: color 0.2s; }
+        .nav-links a:hover { color: #F5F0EB; }
+
+        /* Hero */
+        .hero { padding: 100px 0 80px; text-align: center; }
+        .hero h1 { font-size: clamp(36px, 6vw, 56px); font-weight: 700; color: #F5F0EB; margin-bottom: 16px; line-height: 1.1; }
+        .hero p { font-size: 18px; color: #A39E99; max-width: 520px; margin: 0 auto 40px; }
+        .badge-row { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+        .badge { display: inline-flex; align-items: center; gap: 8px; background: #2A2725; border: 1px solid #353230; border-radius: 12px; padding: 12px 24px; color: #F5F0EB; text-decoration: none; font-weight: 500; font-size: 15px; transition: border-color 0.2s; }
+        .badge:hover { border-color: #D97757; }
+        .badge svg { width: 20px; height: 20px; }
+
+        /* Features */
+        .features { padding: 80px 0; }
+        .features h2 { text-align: center; font-size: 32px; color: #F5F0EB; margin-bottom: 48px; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+        .feature-card { background: #2A2725; border: 1px solid #353230; border-radius: 16px; padding: 28px; }
+        .feature-icon { width: 40px; height: 40px; background: rgba(217,119,87,0.15); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; font-size: 20px; }
+        .feature-card h3 { color: #F5F0EB; font-size: 17px; margin-bottom: 8px; }
+        .feature-card p { color: #A39E99; font-size: 14px; }
+
+        /* CTA */
+        .cta { padding: 80px 0; text-align: center; }
+        .cta h2 { font-size: 28px; color: #F5F0EB; margin-bottom: 12px; }
+        .cta p { color: #A39E99; margin-bottom: 32px; }
+
+        /* Footer */
+        footer { border-top: 1px solid #353230; padding: 32px 0; }
+        footer .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+        footer p { color: #6B6662; font-size: 13px; }
+        .footer-links { display: flex; gap: 24px; }
+        .footer-links a { color: #6B6662; text-decoration: none; font-size: 13px; transition: color 0.2s; }
+        .footer-links a:hover { color: #D97757; }
+
+        @media (max-width: 600px) {
+            .hero { padding: 60px 0 40px; }
+            .features { padding: 40px 0; }
+            footer .container { flex-direction: column; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="/" class="logo">Page<span class="accent">Drop</span></a>
+            <div class="nav-links">
+                <a href="/privacy">Privacidade</a>
+                <a href="/terms">Termos</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Sua jornada de leitura,<br><span class="accent">gamificada.</span></h1>
+            <p>Acompanhe seus livros, registre sessoes de leitura, mantenha sequencias e compartilhe seu progresso com amigos.</p>
+            <div class="badge-row">
+                <a href="#" class="badge">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.53 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+                    App Store
+                </a>
+                <a href="#" class="badge">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 010 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.802 8.99l-2.303 2.303-8.635-8.635z"/></svg>
+                    Google Play
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>Tudo que voce precisa</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">&#128214;</div>
+                    <h3>Biblioteca inteligente</h3>
+                    <p>Organize seus livros por status: lendo, quero ler, lidos. Busca integrada com Google Books.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#9201;</div>
+                    <h3>Timer de leitura</h3>
+                    <p>Registre suas sessoes com timer e sons ambientes. Veja paginas por hora e tempo total.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#128293;</div>
+                    <h3>Sequencias (Streaks)</h3>
+                    <p>Mantenha sua sequencia de leitura diaria. Quanto mais dias seguidos, maior sua conquista.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#128247;</div>
+                    <h3>PagePace</h3>
+                    <p>Tire uma foto diaria da sua leitura e compartilhe com a comunidade. Seu diario visual de leitura.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#128200;</div>
+                    <h3>Estatisticas completas</h3>
+                    <p>Relatorios semanais, mensais e anuais. Veja seus generos favoritos e horarios de leitura.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#127942;</div>
+                    <h3>Conquistas e Clubes</h3>
+                    <p>Desbloqueie badges, participe de clubes de leitura e desafios com amigos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Comece a acompanhar sua leitura <span class="accent">hoje</span></h2>
+            <p>Gratuito para comecar. Premium para ir alem.</p>
+            <div class="badge-row">
+                <a href="#" class="badge">Baixar para iOS</a>
+                <a href="#" class="badge">Baixar para Android</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>PageDrop &copy; 2026. Todos os direitos reservados.</p>
+            <div class="footer-links">
+                <a href="/privacy">Politica de Privacidade</a>
+                <a href="/terms">Termos de Uso</a>
+                <a href="mailto:evertonsijj@gmail.com">Contato</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
