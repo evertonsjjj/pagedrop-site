@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Politica de Privacidade - PageDrop</title>
+    <title data-i18n="meta.title">Politica de Privacidade - PageDrop</title>
     <meta name="theme-color" content="#1A1816">
+    <link rel="alternate" hreflang="pt-BR" href="https://pagedrop.com.br/privacy">
+    <link rel="alternate" hreflang="en" href="https://pagedrop.com.br/privacy?lang=en">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -14,9 +16,13 @@
         nav { padding: 20px 0; border-bottom: 1px solid #353230; }
         nav .container { display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 24px; font-weight: 700; color: #F5F0EB; text-decoration: none; }
-        .nav-links { display: flex; gap: 24px; }
+        .nav-links { display: flex; gap: 24px; align-items: center; }
         .nav-links a { color: #A39E99; text-decoration: none; font-size: 14px; transition: color 0.2s; }
         .nav-links a:hover { color: #F5F0EB; }
+        .lang-toggle { display: flex; gap: 4px; background: #2A2725; border: 1px solid #353230; border-radius: 8px; padding: 2px; }
+        .lang-toggle button { background: transparent; border: none; color: #A39E99; font-family: inherit; font-size: 12px; font-weight: 500; padding: 4px 10px; border-radius: 6px; cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active { background: #D97757; color: #1A1816; }
+        .lang-toggle button:not(.active):hover { color: #F5F0EB; }
         .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
         .content { padding: 60px 0 80px; }
         h1 { color: #F5F0EB; font-size: 32px; margin-bottom: 8px; }
@@ -35,6 +41,7 @@
         .footer-links a:hover { color: #D97757; }
         @media (max-width: 600px) {
             footer .container { flex-direction: column; text-align: center; }
+            .nav-links { gap: 12px; }
         }
     </style>
 </head>
@@ -43,54 +50,69 @@
         <div class="container" style="max-width:960px">
             <a href="/" class="logo">Page<span class="accent">Drop</span></a>
             <div class="nav-links">
-                <a href="/">Inicio</a>
-                <a href="/terms">Termos</a>
+                <a href="/" data-i18n="nav.home">Inicio</a>
+                <a href="/terms" data-i18n="nav.terms">Termos</a>
+                <div class="lang-toggle">
+                    <button data-lang="pt" type="button">PT</button>
+                    <button data-lang="en" type="button">EN</button>
+                </div>
             </div>
         </div>
     </nav>
 
     <div class="content">
         <div class="container">
-            <h1>Politica de Privacidade</h1>
-            <p class="date">Ultima atualizacao: 7 de abril de 2026</p>
+            <h1 data-i18n="page.title">Politica de Privacidade</h1>
+            <p class="date" data-i18n="page.lastUpdated">Ultima atualizacao: 16 de abril de 2026</p>
 
-            <h2>1. Introducao</h2>
-            <p>O PageDrop ("nos") e um aplicativo social de acompanhamento de leitura. Esta Politica de Privacidade explica como coletamos, usamos e protegemos suas informacoes ao utilizar nosso aplicativo movel.</p>
+            <h2 data-i18n="s1.title">1. Introducao</h2>
+            <p data-i18n="s1.body">O PageDrop ("nos") e um aplicativo social de acompanhamento de leitura. Esta Politica de Privacidade explica como coletamos, usamos e protegemos suas informacoes ao utilizar nosso aplicativo movel.</p>
 
-            <h2>2. Informacoes que Coletamos</h2>
-            <p><strong>Informacoes da conta:</strong> Ao criar uma conta, coletamos seu nome, email e foto de perfil (opcional).</p>
-            <p><strong>Dados de leitura:</strong> Livros adicionados a biblioteca, sessoes de leitura, progresso, notas, destaques e estatisticas.</p>
-            <p><strong>Camera e fotos:</strong> Solicitamos acesso a camera exclusivamente para o recurso PagePace, que permite tirar fotos diarias de leitura. As fotos sao enviadas apenas com sua acao explicita. Nao acessamos sua camera ou galeria sem sua permissao.</p>
-            <p><strong>Dados de uso:</strong> Podemos coletar dados anonimos de uso para melhorar a experiencia do aplicativo.</p>
+            <h2 data-i18n="s2.title">2. Informacoes que Coletamos</h2>
+            <p data-i18n-html="s2.account"><strong>Informacoes da conta:</strong> Ao criar uma conta, coletamos seu nome, email e foto de perfil (opcional).</p>
+            <p data-i18n-html="s2.reading"><strong>Dados de leitura:</strong> Livros adicionados a biblioteca, sessoes de leitura, progresso, notas, destaques e estatisticas.</p>
+            <p data-i18n-html="s2.camera"><strong>Camera e fotos:</strong> Solicitamos acesso a camera exclusivamente para o recurso PagePace, que permite tirar fotos diarias de leitura. As fotos sao enviadas apenas com sua acao explicita. Nao acessamos sua camera ou galeria sem sua permissao.</p>
+            <p data-i18n-html="s2.usage"><strong>Dados de uso:</strong> Podemos coletar dados anonimos de uso para melhorar a experiencia do aplicativo.</p>
 
-            <h2>3. Como Usamos suas Informacoes</h2>
-            <ul>
+            <h2 data-i18n="s3.title">3. Como Usamos suas Informacoes</h2>
+            <ul data-i18n-html="s3.list">
                 <li>Para fornecer e manter as funcionalidades de acompanhamento de leitura</li>
                 <li>Para habilitar recursos sociais (seguir, feed, rankings)</li>
                 <li>Para gerar suas estatisticas e insights de leitura</li>
                 <li>Para enviar notificacoes relevantes (que voce pode desativar)</li>
             </ul>
 
-            <h2>4. Compartilhamento de Dados</h2>
-            <p>Nao vendemos seus dados pessoais. Sua atividade de leitura pode ser visivel para outros usuarios de acordo com suas configuracoes de privacidade. Voce pode controlar a visibilidade do seu perfil nas configuracoes do app.</p>
+            <h2 data-i18n="s4.title">4. Compartilhamento de Dados</h2>
+            <p data-i18n="s4.body">Nao vendemos seus dados pessoais. Sua atividade de leitura pode ser visivel para outros usuarios de acordo com suas configuracoes de privacidade. Voce pode controlar a visibilidade do seu perfil nas configuracoes do app.</p>
 
-            <h2>5. Assinaturas e Dados de Pagamento</h2>
-            <p>Os pagamentos de assinatura Premium sao processados exclusivamente pela Apple App Store ou Google Play Store. O PageDrop nao coleta, armazena ou tem acesso aos seus dados de pagamento (cartao de credito, dados bancarios, etc.). Utilizamos o RevenueCat como plataforma para gerenciamento de assinaturas.</p>
+            <h2 data-i18n="s5.title">5. Assinaturas e Dados de Pagamento</h2>
+            <p data-i18n="s5.body">Os pagamentos de assinatura Premium sao processados exclusivamente pela Apple App Store ou Google Play Store. O PageDrop nao coleta, armazena ou tem acesso aos seus dados de pagamento (cartao de credito, dados bancarios, etc.). Utilizamos o RevenueCat como plataforma para gerenciamento de assinaturas.</p>
 
-            <h2>6. Armazenamento e Seguranca</h2>
-            <p>Seus dados sao armazenados de forma segura em nossos servidores. Utilizamos criptografia em transito (HTTPS) e implementamos medidas de seguranca padrao da industria para proteger suas informacoes.</p>
+            <h2 data-i18n="s6.title">6. Armazenamento e Seguranca</h2>
+            <p data-i18n="s6.body">Seus dados sao armazenados de forma segura em nossos servidores. Utilizamos criptografia em transito (HTTPS) e implementamos medidas de seguranca padrao da industria para proteger suas informacoes.</p>
 
-            <h2>7. Servicos de Terceiros</h2>
-            <p>Utilizamos os seguintes servicos de terceiros:</p>
-            <ul>
+            <h2 data-i18n="s7.title">7. Servicos de Terceiros</h2>
+            <p data-i18n="s7.intro">Utilizamos os seguintes servicos de terceiros:</p>
+            <ul data-i18n-html="s7.list">
                 <li><strong>Google Books API / Open Library:</strong> Para buscar e obter informacoes de livros</li>
                 <li><strong>RevenueCat:</strong> Para gerenciamento de assinaturas Premium</li>
                 <li><strong>Cloudinary:</strong> Para armazenamento de imagens (fotos de perfil e PagePace)</li>
             </ul>
 
-            <h2>8. Seus Direitos</h2>
-            <p>Voce tem o direito de:</p>
-            <ul>
+            <h2 data-i18n="s8.title">8. Exclusao de Conta e Dados</h2>
+            <p data-i18n="s8.intro">O PageDrop permite que voce exclua sua conta e todos os dados associados diretamente pelo aplicativo:</p>
+            <ul data-i18n-html="s8.list">
+                <li><strong>Como excluir:</strong> Abra o app &gt; Perfil &gt; Configuracoes &gt; Excluir Conta</li>
+                <li>Voce recebera um email de confirmacao antes da exclusao</li>
+                <li>Apos a confirmacao, todos os seus dados serao excluidos permanentemente em ate 30 dias</li>
+            </ul>
+            <p data-i18n-html="s8.deleted"><strong>Dados excluidos:</strong> perfil, biblioteca de livros, sessoes de leitura, notas, destaques, fotos do PagePace, estatisticas, conquistas e todos os dados sociais (seguidores, feed, mensagens).</p>
+            <p data-i18n-html="s8.retained"><strong>Dados retidos:</strong> Nenhum dado pessoal e retido apos a exclusao, exceto quando exigido por obrigacao legal.</p>
+            <p data-i18n-html="s8.email">Voce tambem pode solicitar a exclusao por email: <a href="mailto:evertonsjjj@gmail.com">evertonsjjj@gmail.com</a></p>
+
+            <h2 data-i18n="s9.title">9. Seus Direitos</h2>
+            <p data-i18n="s9.intro">Voce tem o direito de:</p>
+            <ul data-i18n-html="s9.list">
                 <li>Acessar seus dados pessoais</li>
                 <li>Solicitar a exclusao da sua conta e dados</li>
                 <li>Exportar seus dados de leitura</li>
@@ -98,29 +120,128 @@
                 <li>Controlar a visibilidade do seu perfil e biblioteca</li>
             </ul>
 
-            <h2>9. Privacidade de Menores</h2>
-            <p>O PageDrop nao e destinado a menores de 13 anos. Nao coletamos intencionalmente dados de menores de 13 anos.</p>
+            <h2 data-i18n="s10.title">10. Privacidade de Menores</h2>
+            <p data-i18n="s10.body">O PageDrop nao e destinado a menores de 13 anos. Nao coletamos intencionalmente dados de menores de 13 anos.</p>
 
-            <h2>10. Retencao de Dados</h2>
-            <p>Mantemos seus dados enquanto sua conta estiver ativa. Ao solicitar a exclusao da conta, seus dados serao removidos em ate 30 dias, exceto quando a retencao for necessaria por obrigacao legal.</p>
+            <h2 data-i18n="s11.title">11. Retencao de Dados</h2>
+            <p data-i18n="s11.body">Mantemos seus dados enquanto sua conta estiver ativa. Ao solicitar a exclusao da conta, seus dados serao removidos em ate 30 dias, exceto quando a retencao for necessaria por obrigacao legal.</p>
 
-            <h2>11. Alteracoes nesta Politica</h2>
-            <p>Podemos atualizar esta Politica de Privacidade periodicamente. Notificaremos voce sobre quaisquer alteracoes publicando a nova politica no aplicativo.</p>
+            <h2 data-i18n="s12.title">12. Alteracoes nesta Politica</h2>
+            <p data-i18n="s12.body">Podemos atualizar esta Politica de Privacidade periodicamente. Notificaremos voce sobre quaisquer alteracoes publicando a nova politica no aplicativo.</p>
 
-            <h2>12. Contato</h2>
-            <p>Se voce tiver duvidas sobre esta Politica de Privacidade, entre em contato: <a href="mailto:evertonsjjj@gmail.com">evertonsjjj@gmail.com</a></p>
+            <h2 data-i18n="s13.title">13. Contato</h2>
+            <p data-i18n-html="s13.body">Se voce tiver duvidas sobre esta Politica de Privacidade, entre em contato: <a href="mailto:evertonsjjj@gmail.com">evertonsjjj@gmail.com</a></p>
         </div>
     </div>
 
     <footer>
         <div class="container" style="max-width:960px">
-            <p>PageDrop &copy; 2026. Todos os direitos reservados.</p>
+            <p data-i18n="footer.copyright">PageDrop &copy; 2026. Todos os direitos reservados.</p>
             <div class="footer-links">
-                <a href="/privacy">Politica de Privacidade</a>
-                <a href="/terms">Termos de Uso</a>
-                <a href="mailto:evertonsjjj@gmail.com">Contato</a>
+                <a href="/privacy" data-i18n="footer.privacy">Politica de Privacidade</a>
+                <a href="/terms" data-i18n="footer.terms">Termos de Uso</a>
+                <a href="mailto:evertonsjjj@gmail.com" data-i18n="footer.contact">Contato</a>
             </div>
         </div>
     </footer>
+
+    <script src="/i18n.js"></script>
+    <script>
+        const TRANSLATIONS = {
+            pt: {
+                "meta.title": "Politica de Privacidade - PageDrop",
+                "nav.home": "Inicio",
+                "nav.terms": "Termos",
+                "page.title": "Politica de Privacidade",
+                "page.lastUpdated": "Ultima atualizacao: 16 de abril de 2026",
+                "s1.title": "1. Introducao",
+                "s1.body": "O PageDrop (\"nos\") e um aplicativo social de acompanhamento de leitura. Esta Politica de Privacidade explica como coletamos, usamos e protegemos suas informacoes ao utilizar nosso aplicativo movel.",
+                "s2.title": "2. Informacoes que Coletamos",
+                "s2.account": "<strong>Informacoes da conta:</strong> Ao criar uma conta, coletamos seu nome, email e foto de perfil (opcional).",
+                "s2.reading": "<strong>Dados de leitura:</strong> Livros adicionados a biblioteca, sessoes de leitura, progresso, notas, destaques e estatisticas.",
+                "s2.camera": "<strong>Camera e fotos:</strong> Solicitamos acesso a camera exclusivamente para o recurso PagePace, que permite tirar fotos diarias de leitura. As fotos sao enviadas apenas com sua acao explicita. Nao acessamos sua camera ou galeria sem sua permissao.",
+                "s2.usage": "<strong>Dados de uso:</strong> Podemos coletar dados anonimos de uso para melhorar a experiencia do aplicativo.",
+                "s3.title": "3. Como Usamos suas Informacoes",
+                "s3.list": "<li>Para fornecer e manter as funcionalidades de acompanhamento de leitura</li><li>Para habilitar recursos sociais (seguir, feed, rankings)</li><li>Para gerar suas estatisticas e insights de leitura</li><li>Para enviar notificacoes relevantes (que voce pode desativar)</li>",
+                "s4.title": "4. Compartilhamento de Dados",
+                "s4.body": "Nao vendemos seus dados pessoais. Sua atividade de leitura pode ser visivel para outros usuarios de acordo com suas configuracoes de privacidade. Voce pode controlar a visibilidade do seu perfil nas configuracoes do app.",
+                "s5.title": "5. Assinaturas e Dados de Pagamento",
+                "s5.body": "Os pagamentos de assinatura Premium sao processados exclusivamente pela Apple App Store ou Google Play Store. O PageDrop nao coleta, armazena ou tem acesso aos seus dados de pagamento (cartao de credito, dados bancarios, etc.). Utilizamos o RevenueCat como plataforma para gerenciamento de assinaturas.",
+                "s6.title": "6. Armazenamento e Seguranca",
+                "s6.body": "Seus dados sao armazenados de forma segura em nossos servidores. Utilizamos criptografia em transito (HTTPS) e implementamos medidas de seguranca padrao da industria para proteger suas informacoes.",
+                "s7.title": "7. Servicos de Terceiros",
+                "s7.intro": "Utilizamos os seguintes servicos de terceiros:",
+                "s7.list": "<li><strong>Google Books API / Open Library:</strong> Para buscar e obter informacoes de livros</li><li><strong>RevenueCat:</strong> Para gerenciamento de assinaturas Premium</li><li><strong>Cloudinary:</strong> Para armazenamento de imagens (fotos de perfil e PagePace)</li>",
+                "s8.title": "8. Exclusao de Conta e Dados",
+                "s8.intro": "O PageDrop permite que voce exclua sua conta e todos os dados associados diretamente pelo aplicativo:",
+                "s8.list": "<li><strong>Como excluir:</strong> Abra o app &gt; Perfil &gt; Configuracoes &gt; Excluir Conta</li><li>Voce recebera um email de confirmacao antes da exclusao</li><li>Apos a confirmacao, todos os seus dados serao excluidos permanentemente em ate 30 dias</li>",
+                "s8.deleted": "<strong>Dados excluidos:</strong> perfil, biblioteca de livros, sessoes de leitura, notas, destaques, fotos do PagePace, estatisticas, conquistas e todos os dados sociais (seguidores, feed, mensagens).",
+                "s8.retained": "<strong>Dados retidos:</strong> Nenhum dado pessoal e retido apos a exclusao, exceto quando exigido por obrigacao legal.",
+                "s8.email": "Voce tambem pode solicitar a exclusao por email: <a href=\"mailto:evertonsjjj@gmail.com\">evertonsjjj@gmail.com</a>",
+                "s9.title": "9. Seus Direitos",
+                "s9.intro": "Voce tem o direito de:",
+                "s9.list": "<li>Acessar seus dados pessoais</li><li>Solicitar a exclusao da sua conta e dados</li><li>Exportar seus dados de leitura</li><li>Desativar recursos sociais</li><li>Controlar a visibilidade do seu perfil e biblioteca</li>",
+                "s10.title": "10. Privacidade de Menores",
+                "s10.body": "O PageDrop nao e destinado a menores de 13 anos. Nao coletamos intencionalmente dados de menores de 13 anos.",
+                "s11.title": "11. Retencao de Dados",
+                "s11.body": "Mantemos seus dados enquanto sua conta estiver ativa. Ao solicitar a exclusao da conta, seus dados serao removidos em ate 30 dias, exceto quando a retencao for necessaria por obrigacao legal.",
+                "s12.title": "12. Alteracoes nesta Politica",
+                "s12.body": "Podemos atualizar esta Politica de Privacidade periodicamente. Notificaremos voce sobre quaisquer alteracoes publicando a nova politica no aplicativo.",
+                "s13.title": "13. Contato",
+                "s13.body": "Se voce tiver duvidas sobre esta Politica de Privacidade, entre em contato: <a href=\"mailto:evertonsjjj@gmail.com\">evertonsjjj@gmail.com</a>",
+                "footer.copyright": "PageDrop \u00a9 2026. Todos os direitos reservados.",
+                "footer.privacy": "Politica de Privacidade",
+                "footer.terms": "Termos de Uso",
+                "footer.contact": "Contato"
+            },
+            en: {
+                "meta.title": "Privacy Policy - PageDrop",
+                "nav.home": "Home",
+                "nav.terms": "Terms",
+                "page.title": "Privacy Policy",
+                "page.lastUpdated": "Last updated: April 16, 2026",
+                "s1.title": "1. Introduction",
+                "s1.body": "PageDrop (\"we\") is a social reading tracking app. This Privacy Policy explains how we collect, use, and protect your information when you use our mobile app.",
+                "s2.title": "2. Information We Collect",
+                "s2.account": "<strong>Account information:</strong> When you create an account, we collect your name, email, and profile picture (optional).",
+                "s2.reading": "<strong>Reading data:</strong> Books added to your library, reading sessions, progress, notes, highlights, and statistics.",
+                "s2.camera": "<strong>Camera and photos:</strong> We request camera access exclusively for the PagePace feature, which lets you take daily reading photos. Photos are uploaded only with your explicit action. We do not access your camera or gallery without your permission.",
+                "s2.usage": "<strong>Usage data:</strong> We may collect anonymous usage data to improve the app experience.",
+                "s3.title": "3. How We Use Your Information",
+                "s3.list": "<li>To provide and maintain the reading tracking features</li><li>To enable social features (follow, feed, rankings)</li><li>To generate your reading stats and insights</li><li>To send relevant notifications (which you can disable)</li>",
+                "s4.title": "4. Data Sharing",
+                "s4.body": "We do not sell your personal data. Your reading activity may be visible to other users according to your privacy settings. You can control the visibility of your profile in the app settings.",
+                "s5.title": "5. Subscriptions and Payment Data",
+                "s5.body": "Premium subscription payments are processed exclusively through the Apple App Store or Google Play Store. PageDrop does not collect, store, or have access to your payment data (credit card, banking info, etc.). We use RevenueCat as the subscription management platform.",
+                "s6.title": "6. Storage and Security",
+                "s6.body": "Your data is stored securely on our servers. We use HTTPS encryption in transit and implement industry-standard security measures to protect your information.",
+                "s7.title": "7. Third-Party Services",
+                "s7.intro": "We use the following third-party services:",
+                "s7.list": "<li><strong>Google Books API / Open Library:</strong> To search and obtain book information</li><li><strong>RevenueCat:</strong> For Premium subscription management</li><li><strong>Cloudinary:</strong> For image storage (profile photos and PagePace)</li>",
+                "s8.title": "8. Account and Data Deletion",
+                "s8.intro": "PageDrop lets you delete your account and all associated data directly from the app:",
+                "s8.list": "<li><strong>How to delete:</strong> Open the app &gt; Profile &gt; Settings &gt; Delete Account</li><li>You will receive a confirmation email before deletion</li><li>After confirmation, all your data will be permanently deleted within 30 days</li>",
+                "s8.deleted": "<strong>Data deleted:</strong> profile, book library, reading sessions, notes, highlights, PagePace photos, statistics, achievements, and all social data (followers, feed, messages).",
+                "s8.retained": "<strong>Data retained:</strong> No personal data is retained after deletion, except where required by legal obligation.",
+                "s8.email": "You can also request deletion by email: <a href=\"mailto:evertonsjjj@gmail.com\">evertonsjjj@gmail.com</a>",
+                "s9.title": "9. Your Rights",
+                "s9.intro": "You have the right to:",
+                "s9.list": "<li>Access your personal data</li><li>Request deletion of your account and data</li><li>Export your reading data</li><li>Disable social features</li><li>Control the visibility of your profile and library</li>",
+                "s10.title": "10. Children's Privacy",
+                "s10.body": "PageDrop is not intended for children under 13. We do not knowingly collect data from children under 13.",
+                "s11.title": "11. Data Retention",
+                "s11.body": "We keep your data while your account is active. When you request account deletion, your data will be removed within 30 days, except when retention is required by legal obligation.",
+                "s12.title": "12. Changes to This Policy",
+                "s12.body": "We may update this Privacy Policy periodically. We will notify you of any changes by publishing the new policy in the app.",
+                "s13.title": "13. Contact",
+                "s13.body": "If you have questions about this Privacy Policy, contact us: <a href=\"mailto:evertonsjjj@gmail.com\">evertonsjjj@gmail.com</a>",
+                "footer.copyright": "PageDrop \u00a9 2026. All rights reserved.",
+                "footer.privacy": "Privacy Policy",
+                "footer.terms": "Terms of Use",
+                "footer.contact": "Contact"
+            }
+        };
+        applyTranslations(TRANSLATIONS);
+    </script>
 </body>
 </html>

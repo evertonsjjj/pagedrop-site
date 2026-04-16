@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Termos de Uso - PageDrop</title>
+    <title data-i18n="meta.title">Termos de Uso - PageDrop</title>
     <meta name="theme-color" content="#1A1816">
+    <link rel="alternate" hreflang="pt-BR" href="https://pagedrop.com.br/terms">
+    <link rel="alternate" hreflang="en" href="https://pagedrop.com.br/terms?lang=en">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -14,9 +16,13 @@
         nav { padding: 20px 0; border-bottom: 1px solid #353230; }
         nav .container { display: flex; justify-content: space-between; align-items: center; }
         .logo { font-size: 24px; font-weight: 700; color: #F5F0EB; text-decoration: none; }
-        .nav-links { display: flex; gap: 24px; }
+        .nav-links { display: flex; gap: 24px; align-items: center; }
         .nav-links a { color: #A39E99; text-decoration: none; font-size: 14px; transition: color 0.2s; }
         .nav-links a:hover { color: #F5F0EB; }
+        .lang-toggle { display: flex; gap: 4px; background: #2A2725; border: 1px solid #353230; border-radius: 8px; padding: 2px; }
+        .lang-toggle button { background: transparent; border: none; color: #A39E99; font-family: inherit; font-size: 12px; font-weight: 500; padding: 4px 10px; border-radius: 6px; cursor: pointer; transition: all 0.2s; }
+        .lang-toggle button.active { background: #D97757; color: #1A1816; }
+        .lang-toggle button:not(.active):hover { color: #F5F0EB; }
         .container { max-width: 720px; margin: 0 auto; padding: 0 24px; }
         .content { padding: 60px 0 80px; }
         h1 { color: #F5F0EB; font-size: 32px; margin-bottom: 8px; }
@@ -35,6 +41,7 @@
         .footer-links a:hover { color: #D97757; }
         @media (max-width: 600px) {
             footer .container { flex-direction: column; text-align: center; }
+            .nav-links { gap: 12px; }
         }
     </style>
 </head>
@@ -43,23 +50,27 @@
         <div class="container" style="max-width:960px">
             <a href="/" class="logo">Page<span class="accent">Drop</span></a>
             <div class="nav-links">
-                <a href="/">Inicio</a>
-                <a href="/privacy">Privacidade</a>
+                <a href="/" data-i18n="nav.home">Inicio</a>
+                <a href="/privacy" data-i18n="nav.privacy">Privacidade</a>
+                <div class="lang-toggle">
+                    <button data-lang="pt" type="button">PT</button>
+                    <button data-lang="en" type="button">EN</button>
+                </div>
             </div>
         </div>
     </nav>
 
     <div class="content">
         <div class="container">
-            <h1>Termos de Uso</h1>
-            <p class="date">Ultima atualizacao: 7 de abril de 2026</p>
+            <h1 data-i18n="page.title">Termos de Uso</h1>
+            <p class="date" data-i18n="page.lastUpdated">Ultima atualizacao: 16 de abril de 2026</p>
 
-            <h2>1. Aceitacao dos Termos</h2>
-            <p>Ao baixar, instalar ou usar o aplicativo PageDrop, voce concorda com estes Termos de Uso. Se voce nao concordar, nao utilize o aplicativo.</p>
+            <h2 data-i18n="s1.title">1. Aceitacao dos Termos</h2>
+            <p data-i18n="s1.body">Ao baixar, instalar ou usar o aplicativo PageDrop, voce concorda com estes Termos de Uso. Se voce nao concordar, nao utilize o aplicativo.</p>
 
-            <h2>2. Descricao do Servico</h2>
-            <p>O PageDrop e um aplicativo de acompanhamento de leitura que permite aos usuarios:</p>
-            <ul>
+            <h2 data-i18n="s2.title">2. Descricao do Servico</h2>
+            <p data-i18n="s2.intro">O PageDrop e um aplicativo de acompanhamento de leitura que permite aos usuarios:</p>
+            <ul data-i18n-html="s2.list">
                 <li>Registrar e organizar livros em uma biblioteca pessoal</li>
                 <li>Cronometrar e registrar sessoes de leitura</li>
                 <li>Visualizar estatisticas e progresso de leitura</li>
@@ -67,66 +78,155 @@
                 <li>Participar de clubes de leitura e desafios</li>
             </ul>
 
-            <h2>3. Conta do Usuario</h2>
-            <p>Para utilizar o PageDrop, voce deve criar uma conta fornecendo um email valido e uma senha. Voce e responsavel por manter a seguranca da sua conta e por todas as atividades realizadas nela.</p>
+            <h2 data-i18n="s3.title">3. Conta do Usuario</h2>
+            <p data-i18n="s3.body">Para utilizar o PageDrop, voce deve criar uma conta fornecendo um email valido e uma senha. Voce e responsavel por manter a seguranca da sua conta e por todas as atividades realizadas nela.</p>
 
-            <h2>4. Plano Gratuito e Premium</h2>
-            <p>O PageDrop oferece um plano gratuito com funcionalidades limitadas e um plano Premium com recursos adicionais.</p>
-            <ul>
+            <h2 data-i18n="s4.title">4. Plano Gratuito e Premium</h2>
+            <p data-i18n="s4.intro">O PageDrop oferece um plano gratuito com funcionalidades limitadas e um plano Premium com recursos adicionais.</p>
+            <ul data-i18n-html="s4.list">
                 <li><strong>Plano Gratuito:</strong> biblioteca de ate 300 livros, PagePace a cada 3 dias, estatisticas basicas.</li>
                 <li><strong>Plano Premium:</strong> biblioteca ilimitada, PagePace diario, relatorios completos, sem anuncios, clubes com ate 100 membros, e outros beneficios.</li>
             </ul>
 
-            <h2>5. Assinaturas e Pagamentos</h2>
-            <p>As assinaturas Premium sao processadas pela Apple App Store ou Google Play Store, conforme a plataforma utilizada. As condicoes de pagamento, renovacao e cancelamento seguem as politicas da respectiva loja:</p>
-            <ul>
+            <h2 data-i18n="s5.title">5. Assinaturas e Pagamentos</h2>
+            <p data-i18n="s5.intro">As assinaturas Premium sao processadas pela Apple App Store ou Google Play Store, conforme a plataforma utilizada. As condicoes de pagamento, renovacao e cancelamento seguem as politicas da respectiva loja:</p>
+            <ul data-i18n-html="s5.list">
                 <li>O pagamento e cobrado na confirmacao da compra atraves da sua conta na loja de aplicativos.</li>
                 <li>A assinatura e renovada automaticamente ao final de cada periodo, salvo cancelamento antes do termino do ciclo vigente.</li>
                 <li>Voce pode gerenciar e cancelar sua assinatura nas configuracoes da sua conta na App Store ou Google Play.</li>
                 <li>Nenhum reembolso sera concedido por periodos parciais nao utilizados.</li>
             </ul>
 
-            <h2>6. Conteudo do Usuario</h2>
-            <p>Voce mantem a propriedade de todo o conteudo que cria no PageDrop (notas, resenhas, fotos do PagePace). Ao publicar conteudo visivel a outros usuarios, voce concede ao PageDrop uma licenca nao exclusiva para exibir esse conteudo dentro do aplicativo.</p>
+            <h2 data-i18n="s6.title">6. Conteudo do Usuario</h2>
+            <p data-i18n="s6.body">Voce mantem a propriedade de todo o conteudo que cria no PageDrop (notas, resenhas, fotos do PagePace). Ao publicar conteudo visivel a outros usuarios, voce concede ao PageDrop uma licenca nao exclusiva para exibir esse conteudo dentro do aplicativo.</p>
 
-            <h2>7. Conduta do Usuario</h2>
-            <p>Ao utilizar o PageDrop, voce concorda em nao:</p>
-            <ul>
+            <h2 data-i18n="s7.title">7. Conduta do Usuario</h2>
+            <p data-i18n="s7.intro">Ao utilizar o PageDrop, voce concorda em nao:</p>
+            <ul data-i18n-html="s7.list">
                 <li>Publicar conteudo ofensivo, ilegal ou que viole direitos de terceiros</li>
                 <li>Usar o app para spam, assedio ou comportamento abusivo</li>
                 <li>Tentar acessar contas de outros usuarios</li>
                 <li>Interferir no funcionamento do aplicativo ou seus servidores</li>
             </ul>
 
-            <h2>8. Propriedade Intelectual</h2>
-            <p>O aplicativo PageDrop, incluindo seu design, codigo, marca e conteudo original, e propriedade de seus desenvolvedores. As informacoes de livros sao obtidas de fontes publicas (Google Books, Open Library).</p>
+            <h2 data-i18n="s8.title">8. Propriedade Intelectual</h2>
+            <p data-i18n="s8.body">O aplicativo PageDrop, incluindo seu design, codigo, marca e conteudo original, e propriedade de seus desenvolvedores. As informacoes de livros sao obtidas de fontes publicas (Google Books, Open Library).</p>
 
-            <h2>9. Isencao de Garantias</h2>
-            <p>O PageDrop e fornecido "como esta". Nao garantimos que o servico sera ininterrupto ou livre de erros. Fazemos nosso melhor para manter o app funcionando de forma estavel e segura.</p>
+            <h2 data-i18n="s9.title">9. Isencao de Garantias</h2>
+            <p data-i18n="s9.body">O PageDrop e fornecido "como esta". Nao garantimos que o servico sera ininterrupto ou livre de erros. Fazemos nosso melhor para manter o app funcionando de forma estavel e segura.</p>
 
-            <h2>10. Limitacao de Responsabilidade</h2>
-            <p>O PageDrop nao se responsabiliza por danos indiretos resultantes do uso do aplicativo, incluindo perda de dados de leitura. Recomendamos manter registros importantes em local separado.</p>
+            <h2 data-i18n="s10.title">10. Limitacao de Responsabilidade</h2>
+            <p data-i18n="s10.body">O PageDrop nao se responsabiliza por danos indiretos resultantes do uso do aplicativo, incluindo perda de dados de leitura. Recomendamos manter registros importantes em local separado.</p>
 
-            <h2>11. Encerramento de Conta</h2>
-            <p>Voce pode solicitar o encerramento da sua conta a qualquer momento. Nos reservamos o direito de suspender ou encerrar contas que violem estes termos.</p>
+            <h2 data-i18n="s11.title">11. Encerramento de Conta</h2>
+            <p data-i18n="s11.body">Voce pode solicitar o encerramento da sua conta a qualquer momento. Nos reservamos o direito de suspender ou encerrar contas que violem estes termos.</p>
 
-            <h2>12. Alteracoes nos Termos</h2>
-            <p>Podemos atualizar estes Termos de Uso periodicamente. Alteracoes significativas serao comunicadas pelo aplicativo. O uso continuado apos alteracoes constitui aceitacao dos novos termos.</p>
+            <h2 data-i18n="s12.title">12. Alteracoes nos Termos</h2>
+            <p data-i18n="s12.body">Podemos atualizar estes Termos de Uso periodicamente. Alteracoes significativas serao comunicadas pelo aplicativo. O uso continuado apos alteracoes constitui aceitacao dos novos termos.</p>
 
-            <h2>13. Contato</h2>
-            <p>Para duvidas sobre estes Termos de Uso, entre em contato: <a href="mailto:evertonsjjj@gmail.com">evertonsjjj@gmail.com</a></p>
+            <h2 data-i18n="s13.title">13. Contato</h2>
+            <p data-i18n-html="s13.body">Para duvidas sobre estes Termos de Uso, entre em contato: <a href="mailto:evertonsjjj@gmail.com">evertonsjjj@gmail.com</a></p>
         </div>
     </div>
 
     <footer>
         <div class="container" style="max-width:960px">
-            <p>PageDrop &copy; 2026. Todos os direitos reservados.</p>
+            <p data-i18n="footer.copyright">PageDrop &copy; 2026. Todos os direitos reservados.</p>
             <div class="footer-links">
-                <a href="/privacy">Politica de Privacidade</a>
-                <a href="/terms">Termos de Uso</a>
-                <a href="mailto:evertonsjjj@gmail.com">Contato</a>
+                <a href="/privacy" data-i18n="footer.privacy">Politica de Privacidade</a>
+                <a href="/terms" data-i18n="footer.terms">Termos de Uso</a>
+                <a href="mailto:evertonsjjj@gmail.com" data-i18n="footer.contact">Contato</a>
             </div>
         </div>
     </footer>
+
+    <script src="/i18n.js"></script>
+    <script>
+        const TRANSLATIONS = {
+            pt: {
+                "meta.title": "Termos de Uso - PageDrop",
+                "nav.home": "Inicio",
+                "nav.privacy": "Privacidade",
+                "page.title": "Termos de Uso",
+                "page.lastUpdated": "Ultima atualizacao: 16 de abril de 2026",
+                "s1.title": "1. Aceitacao dos Termos",
+                "s1.body": "Ao baixar, instalar ou usar o aplicativo PageDrop, voce concorda com estes Termos de Uso. Se voce nao concordar, nao utilize o aplicativo.",
+                "s2.title": "2. Descricao do Servico",
+                "s2.intro": "O PageDrop e um aplicativo de acompanhamento de leitura que permite aos usuarios:",
+                "s2.list": "<li>Registrar e organizar livros em uma biblioteca pessoal</li><li>Cronometrar e registrar sessoes de leitura</li><li>Visualizar estatisticas e progresso de leitura</li><li>Compartilhar atividades de leitura com outros usuarios</li><li>Participar de clubes de leitura e desafios</li>",
+                "s3.title": "3. Conta do Usuario",
+                "s3.body": "Para utilizar o PageDrop, voce deve criar uma conta fornecendo um email valido e uma senha. Voce e responsavel por manter a seguranca da sua conta e por todas as atividades realizadas nela.",
+                "s4.title": "4. Plano Gratuito e Premium",
+                "s4.intro": "O PageDrop oferece um plano gratuito com funcionalidades limitadas e um plano Premium com recursos adicionais.",
+                "s4.list": "<li><strong>Plano Gratuito:</strong> biblioteca de ate 300 livros, PagePace a cada 3 dias, estatisticas basicas.</li><li><strong>Plano Premium:</strong> biblioteca ilimitada, PagePace diario, relatorios completos, sem anuncios, clubes com ate 100 membros, e outros beneficios.</li>",
+                "s5.title": "5. Assinaturas e Pagamentos",
+                "s5.intro": "As assinaturas Premium sao processadas pela Apple App Store ou Google Play Store, conforme a plataforma utilizada. As condicoes de pagamento, renovacao e cancelamento seguem as politicas da respectiva loja:",
+                "s5.list": "<li>O pagamento e cobrado na confirmacao da compra atraves da sua conta na loja de aplicativos.</li><li>A assinatura e renovada automaticamente ao final de cada periodo, salvo cancelamento antes do termino do ciclo vigente.</li><li>Voce pode gerenciar e cancelar sua assinatura nas configuracoes da sua conta na App Store ou Google Play.</li><li>Nenhum reembolso sera concedido por periodos parciais nao utilizados.</li>",
+                "s6.title": "6. Conteudo do Usuario",
+                "s6.body": "Voce mantem a propriedade de todo o conteudo que cria no PageDrop (notas, resenhas, fotos do PagePace). Ao publicar conteudo visivel a outros usuarios, voce concede ao PageDrop uma licenca nao exclusiva para exibir esse conteudo dentro do aplicativo.",
+                "s7.title": "7. Conduta do Usuario",
+                "s7.intro": "Ao utilizar o PageDrop, voce concorda em nao:",
+                "s7.list": "<li>Publicar conteudo ofensivo, ilegal ou que viole direitos de terceiros</li><li>Usar o app para spam, assedio ou comportamento abusivo</li><li>Tentar acessar contas de outros usuarios</li><li>Interferir no funcionamento do aplicativo ou seus servidores</li>",
+                "s8.title": "8. Propriedade Intelectual",
+                "s8.body": "O aplicativo PageDrop, incluindo seu design, codigo, marca e conteudo original, e propriedade de seus desenvolvedores. As informacoes de livros sao obtidas de fontes publicas (Google Books, Open Library).",
+                "s9.title": "9. Isencao de Garantias",
+                "s9.body": "O PageDrop e fornecido \"como esta\". Nao garantimos que o servico sera ininterrupto ou livre de erros. Fazemos nosso melhor para manter o app funcionando de forma estavel e segura.",
+                "s10.title": "10. Limitacao de Responsabilidade",
+                "s10.body": "O PageDrop nao se responsabiliza por danos indiretos resultantes do uso do aplicativo, incluindo perda de dados de leitura. Recomendamos manter registros importantes em local separado.",
+                "s11.title": "11. Encerramento de Conta",
+                "s11.body": "Voce pode solicitar o encerramento da sua conta a qualquer momento. Nos reservamos o direito de suspender ou encerrar contas que violem estes termos.",
+                "s12.title": "12. Alteracoes nos Termos",
+                "s12.body": "Podemos atualizar estes Termos de Uso periodicamente. Alteracoes significativas serao comunicadas pelo aplicativo. O uso continuado apos alteracoes constitui aceitacao dos novos termos.",
+                "s13.title": "13. Contato",
+                "s13.body": "Para duvidas sobre estes Termos de Uso, entre em contato: <a href=\"mailto:evertonsjjj@gmail.com\">evertonsjjj@gmail.com</a>",
+                "footer.copyright": "PageDrop \u00a9 2026. Todos os direitos reservados.",
+                "footer.privacy": "Politica de Privacidade",
+                "footer.terms": "Termos de Uso",
+                "footer.contact": "Contato"
+            },
+            en: {
+                "meta.title": "Terms of Use - PageDrop",
+                "nav.home": "Home",
+                "nav.privacy": "Privacy",
+                "page.title": "Terms of Use",
+                "page.lastUpdated": "Last updated: April 16, 2026",
+                "s1.title": "1. Acceptance of Terms",
+                "s1.body": "By downloading, installing, or using the PageDrop app, you agree to these Terms of Use. If you do not agree, do not use the app.",
+                "s2.title": "2. Service Description",
+                "s2.intro": "PageDrop is a reading tracking app that lets users:",
+                "s2.list": "<li>Register and organize books in a personal library</li><li>Time and log reading sessions</li><li>View statistics and reading progress</li><li>Share reading activities with other users</li><li>Join reading clubs and challenges</li>",
+                "s3.title": "3. User Account",
+                "s3.body": "To use PageDrop, you must create an account by providing a valid email and password. You are responsible for maintaining the security of your account and for all activities performed in it.",
+                "s4.title": "4. Free and Premium Plans",
+                "s4.intro": "PageDrop offers a free plan with limited features and a Premium plan with additional features.",
+                "s4.list": "<li><strong>Free Plan:</strong> library of up to 300 books, PagePace every 3 days, basic statistics.</li><li><strong>Premium Plan:</strong> unlimited library, daily PagePace, full reports, no ads, clubs with up to 100 members, and other benefits.</li>",
+                "s5.title": "5. Subscriptions and Payments",
+                "s5.intro": "Premium subscriptions are processed through the Apple App Store or Google Play Store, depending on the platform used. Payment, renewal, and cancellation terms follow the respective store's policies:",
+                "s5.list": "<li>Payment is charged at purchase confirmation through your app store account.</li><li>The subscription renews automatically at the end of each period unless cancelled before the end of the current cycle.</li><li>You can manage and cancel your subscription in your account settings on the App Store or Google Play.</li><li>No refunds will be granted for partial unused periods.</li>",
+                "s6.title": "6. User Content",
+                "s6.body": "You retain ownership of all content you create on PageDrop (notes, reviews, PagePace photos). By publishing content visible to other users, you grant PageDrop a non-exclusive license to display that content within the app.",
+                "s7.title": "7. User Conduct",
+                "s7.intro": "When using PageDrop, you agree not to:",
+                "s7.list": "<li>Publish offensive, illegal, or third-party-rights-violating content</li><li>Use the app for spam, harassment, or abusive behavior</li><li>Attempt to access other users' accounts</li><li>Interfere with the operation of the app or its servers</li>",
+                "s8.title": "8. Intellectual Property",
+                "s8.body": "The PageDrop app, including its design, code, brand, and original content, is property of its developers. Book information is obtained from public sources (Google Books, Open Library).",
+                "s9.title": "9. Disclaimer of Warranties",
+                "s9.body": "PageDrop is provided \"as is\". We do not guarantee that the service will be uninterrupted or error-free. We do our best to keep the app working stably and securely.",
+                "s10.title": "10. Limitation of Liability",
+                "s10.body": "PageDrop is not responsible for indirect damages resulting from app usage, including loss of reading data. We recommend keeping important records in a separate place.",
+                "s11.title": "11. Account Termination",
+                "s11.body": "You can request to terminate your account at any time. We reserve the right to suspend or terminate accounts that violate these terms.",
+                "s12.title": "12. Changes to Terms",
+                "s12.body": "We may update these Terms of Use periodically. Significant changes will be communicated through the app. Continued use after changes constitutes acceptance of the new terms.",
+                "s13.title": "13. Contact",
+                "s13.body": "For questions about these Terms of Use, contact us: <a href=\"mailto:evertonsjjj@gmail.com\">evertonsjjj@gmail.com</a>",
+                "footer.copyright": "PageDrop \u00a9 2026. All rights reserved.",
+                "footer.privacy": "Privacy Policy",
+                "footer.terms": "Terms of Use",
+                "footer.contact": "Contact"
+            }
+        };
+        applyTranslations(TRANSLATIONS);
+    </script>
 </body>
 </html>
