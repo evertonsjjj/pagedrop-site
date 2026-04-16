@@ -12,10 +12,17 @@
   const SUPPORTED = ["pt", "en"];
   const DEFAULT_LANG = "pt";
 
+  function saveLanguage(lang) {
+    try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) { /* ignore */ }
+  }
+
   function detectLanguage() {
-    // 1. URL query string ?lang=en
+    // 1. URL query string ?lang=en (also persists for next pages)
     const urlLang = new URLSearchParams(window.location.search).get("lang");
-    if (urlLang && SUPPORTED.includes(urlLang)) return urlLang;
+    if (urlLang && SUPPORTED.includes(urlLang)) {
+      saveLanguage(urlLang);
+      return urlLang;
+    }
 
     // 2. Saved preference in localStorage
     try {
@@ -29,10 +36,6 @@
     if (navLang.startsWith("en")) return "en";
 
     return DEFAULT_LANG;
-  }
-
-  function saveLanguage(lang) {
-    try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) { /* ignore */ }
   }
 
   function applyTranslations(translations) {
