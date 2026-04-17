@@ -9,7 +9,7 @@
 
 (function () {
   const STORAGE_KEY = "pagedrop_site_lang";
-  const SUPPORTED = ["pt", "en"];
+  const SUPPORTED = ["pt", "en", "es"];
   const DEFAULT_LANG = "pt";
 
   function saveLanguage(lang) {
@@ -34,6 +34,7 @@
     const navLang = (navigator.language || navigator.userLanguage || DEFAULT_LANG).toLowerCase();
     if (navLang.startsWith("pt")) return "pt";
     if (navLang.startsWith("en")) return "en";
+    if (navLang.startsWith("es")) return "es";
 
     return DEFAULT_LANG;
   }
@@ -43,7 +44,8 @@
     const dict = translations[lang] || translations[DEFAULT_LANG];
 
     // Update <html lang="...">
-    document.documentElement.setAttribute("lang", lang === "pt" ? "pt-BR" : "en");
+    const htmlLangMap = { pt: "pt-BR", en: "en", es: "es" };
+    document.documentElement.setAttribute("lang", htmlLangMap[lang] || "pt-BR");
 
     // Plain text content
     document.querySelectorAll("[data-i18n]").forEach((el) => {
